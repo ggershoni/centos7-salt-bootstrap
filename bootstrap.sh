@@ -20,3 +20,7 @@ else
   sudo sed -i '/^#file_client: remote$/a file_client: local' /etc/salt/minion
 fi
 echo "END: Tell Salt to look for files locally"
+
+echo "Run Salt"
+sudo salt-call --file-root=salt --local state.apply
+echo "END: Run Salt"
