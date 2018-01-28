@@ -25,3 +25,13 @@ Now log out of server and make sure you can ssh in without password:
 ```
 ssh <username>@<server>
 ```
+Once you have logged in lets install `git` and clone this repository (Note: you may need to setup ssh key with GitHub):
+```
+sudo yum install -y git
+git clone git@github.com:ggershoni/centos7-salt-bootstrap.git
+```
+then lets start the bootstrap script
+```
+cd centos-7-salt-bootstrap
+./bootstrap.sh
+```
