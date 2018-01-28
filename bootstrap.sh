@@ -9,6 +9,12 @@ sudo yum install -y epel-release
 sudo yum update -y
 echo "END: Install EPEL repo"
 
+echo "Install SaltStack repo"
+sudo yum install -y https://repo.saltstack.com/yum/redhat/salt-repo-latest-2.el7.noarch.rpm
+sudo yum clean expire-cache
+sudo yum update -y
+echo "END:Install SaltStack repo"
+
 echo "Install SaltStack Minion (We are running masterless)"
 sudo yum install -y salt-minion
 echo "END: Install SaltStack Minion"
